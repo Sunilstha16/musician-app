@@ -52,14 +52,14 @@ router.put('/:id', jsonParser, async (req, res) => {
 });
 
 // retrieve a musician from data store
-router.delete('/:id', (req, res) => {
-  const { musician } = req.app.locals;
-  musician.deleteMusician(req.params.id, (err, deletedMusicianId) => {
-    if (err) {
+//router.delete('/:id', (req, res) => {
+  //const { musician } = req.app.locals;
+  //musician.deleteMusician(req.params.id, (err, deletedMusicianId) => {
+    //if (err) {
       res.status('400').send({errorMessage: err});
-    }
-    res.status('200').send(deletedMusicianId);
-  });
-});
+    //}
+    //res.status('200').send(deletedMusicianId);
+  //});
+//});
 
 module.exports = router;
